@@ -18,7 +18,7 @@ export default function ExplorerPage() {
     'success',
   );
 
-  const { gallery, addToGallery, removeFromGallery } = useGallery();
+  const { gallery, addToGallery, removeFromGallery, updateNote } = useGallery();
 
   async function handleSearch() {
     if (!query.trim()) return;

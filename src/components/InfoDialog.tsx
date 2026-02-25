@@ -42,7 +42,7 @@ export default function InfoDialog({
         onClick={onClose}
       />
 
-      <div className='relative bg-white rounded-2xl shadow-xl w-[380px] max-w-[90vw] p-6 text-center animate-fade-in'>
+      <div className='relative bg-white rounded-2xl shadow-xl w-380px max-w-[90vw] p-6 text-center animate-fade-in'>
         <div className='mb-4'>
           <div
             className={`text-3xl mb-2 ${

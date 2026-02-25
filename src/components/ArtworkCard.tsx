@@ -78,21 +78,21 @@ export default function ArtworkCard({ artwork, onAdd, onDelete }: Props) {
 
       {/* Preview Modal */}
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <div className='flex flex-col h-full gap-6'>
-          {/* Image section */}
-          <div className='flex-1 flex items-center justify-center'>
+        <div className='flex flex-col h-full'>
+          {/* Image Section – fix arány */}
+          <div className='flex-[3] flex items-center justify-center overflow-hidden'>
             {artwork.image_id && (
               <img
                 src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
                 alt={artwork.title}
-                className='max-h-[380px] object-contain rounded-2xl'
+                className='max-h-full max-w-full object-contain rounded-2xl'
               />
             )}
           </div>
 
-          {/* Info section */}
-          <div className='text-center'>
-            <h2 className='text-3xl font-semibold'>{artwork.title}</h2>
+          {/* Info Section – fix alsó rész */}
+          <div className='flex-[1] flex flex-col justify-center text-center mt-6'>
+            <h2 className='text-2xl font-semibold'>{artwork.title}</h2>
 
             <p className='text-gray-500 dark:text-gray-400 mt-2'>
               {artwork.artist_title ?? 'Unknown artist'}
